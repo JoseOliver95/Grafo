@@ -5,17 +5,33 @@
  */
 package grafo;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.Vector;
+import javax.swing.JPanel;
+
 /**
  *
  * @author hp
  */
-public class Lienzo extends javax.swing.JFrame {
+public class Lienzo extends javax.swing.JFrame implements MouseListener{
+    private Vector<Nodo> vectorNodos;
+    
 
     /**
      * Creates new form Lienzo
      */
     public Lienzo() {
         initComponents();
+        this.vectorNodos = new Vector<>();
+        this.addMouseListener(this);
+        setBackground(Color.white);
+        setResizable(false);
+        setLocationRelativeTo(null);
+        ((JPanel) getContentPane()).setOpaque (false);
+        setTitle("GRAFO");
     }
 
     /**
@@ -76,6 +92,40 @@ public class Lienzo extends javax.swing.JFrame {
                 new Lienzo().setVisible(true);
             }
         });
+    }
+
+    @Override
+    public void paint(Graphics g){
+        for(Nodo nodos : vectorNodos){
+            nodos.pintar(g);
+        }
+    }
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if(e.getButton() == MouseEvent.BUTTON1){
+            this.vectorNodos.add(new Nodo(e.getX(), e.getY()));
+            repaint();
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
