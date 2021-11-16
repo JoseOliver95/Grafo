@@ -4,5 +4,4 @@ public class Grafo {
         Lienzo a = new Lienzo();
         a.setVisible(true);
     }
-    
 }
