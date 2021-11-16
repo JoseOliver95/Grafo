@@ -87,12 +87,10 @@ public class Lienzo extends javax.swing.JFrame implements MouseListener{
 
     @Override
     public void paint(Graphics g){
-        for(Nodo nodos : vectorNodos){
+        for(Nodo nodos : vectorNodos)
             nodos.pintar(g);
-        }
-        for(Enlace enlace : vectorEnlaces){
+        for(Enlace enlace : vectorEnlaces)
             enlace.pintar(g);
-        }
     }
     @Override
     public void mouseClicked(MouseEvent e) {
