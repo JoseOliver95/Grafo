@@ -23,8 +23,8 @@ public class Lienzo extends javax.swing.JFrame implements MouseListener, MouseMo
         this.vectorEnlaces = new Vector<>();
         this.addMouseListener(this);
         this.addMouseMotionListener(this);
-        setBackground(Color.black);
-        setForeground(Color.white);
+        setBackground(Color.white);
+        setForeground(Color.black);
         setResizable(false);
         setLocationRelativeTo(null);
         ((JPanel) getContentPane()).setOpaque (false);
@@ -105,6 +105,8 @@ public class Lienzo extends javax.swing.JFrame implements MouseListener, MouseMo
             String nombre = JOptionPane.showInputDialog("Escribe el nombre del nodo");
             this.vectorNodos.add(new Nodo(e.getX(), e.getY(), nombre));
             repaint();
+            this.setBackground(Color.black);
+            this.setForeground(Color.white);
         }
         if(e.getButton() == MouseEvent.BUTTON3){
             for(Nodo nodo : vectorNodos){
