@@ -6,7 +6,7 @@ public class Nodo {
     private String nombre;
     public static final int d = 60;
 
-    public Nodo(int x, int y) {
+    public Nodo(int x, int y, String nombre) {
         this.x = x;
         this.y = y;
     }
