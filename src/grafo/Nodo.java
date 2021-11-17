@@ -2,6 +2,7 @@ package grafo;
 import java.awt.Graphics;
 
 public class Nodo {
+    //ya pude editar?
     private int x, y;
     private String nombre;
     public static final int d = 60;
