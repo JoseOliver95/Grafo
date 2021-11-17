@@ -3,6 +3,7 @@ import java.awt.Graphics;
 
 public class Nodo {
     private int x, y;
+    private String nombre;
     public static final int d = 60;
 
     public Nodo(int x, int y) {
