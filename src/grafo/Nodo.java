@@ -11,6 +11,10 @@ public class Nodo {
         this.y = y;
         this.nombre = nombre;
     }
+
+    Nodo(int x, int y) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public void pintar(Graphics g){
         g.drawOval(this.x - d/2, this.y - d/2, d, d);
         g.drawString(nombre, x, y);
