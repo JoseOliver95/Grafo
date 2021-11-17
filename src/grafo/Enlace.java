@@ -8,6 +8,9 @@ public class Enlace {
         this.x2 = x2;
         this.y2 = y2;
     }
+    
+    
+    
     public void pintar(Graphics g){
         g.drawLine(x1, y1, x2, y2);
     }
