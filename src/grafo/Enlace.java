@@ -9,11 +9,10 @@ public class Enlace {
         this.x2 = x2;
         this.y2 = y2;
         this.nombre = nombre;
-        
-        
-        
+    
     }
 
+    
     Enlace(int x, int y, int x0, int y0, String nombre) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
