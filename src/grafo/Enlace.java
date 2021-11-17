@@ -13,6 +13,10 @@ public class Enlace {
         
         
     }
+
+    Enlace(int x, int y, int x0, int y0, String nombre) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public void pintar(Graphics g){
         g.drawLine(x1, y1, x2, y2);
         if (x1 > x2 && y1 > y2){
